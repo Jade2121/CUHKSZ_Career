@@ -3,7 +3,7 @@
 <head>
 	<base target="_top">
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no">
 	
 	<title>Alumni Allocation By Leaflet</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -17,8 +17,12 @@
     <style>
 		html, body {
 			height: 100%;
-			margin: 0;
+			width: 100vw
 		}
+		body {
+    	padding: 0;
+    	margin: 0;
+}
 		.leaflet-container {
 			height: 400px;
 			width: 600px;
@@ -44,11 +48,14 @@
 </head>
 
 <body>
+
+<a href=index.html onClick="javascript :history.back(-1);">返回上一页</a>
 <h2>CUHKSZ Alumni Distrbution</h2>
 <style> 
 	body{text-align:center} 
   </style> 
 <div id="map" style="margin:0 auto"></div>
+
 <p>The map reflects the distribution of CUHK SZ alumni in the United States from 2016 to 2025. The varying shades in the image represent the relative numbers of alumni, with darker colors indicating higher numbers. Alumni are dispersed across 20 states, with the highest numbers in New York and California, and the lowest in Connecticut. Due to limited data precision, there may be some inaccuracies in the representation. </p>
 <p>
 This map is an interactive map; hovering the mouse over a specific state will display the corresponding number of alumni in that state.
@@ -57,7 +64,9 @@ This map is an interactive map; hovering the mouse over a specific state will di
 <p> Special thanks to the tutorial from the Leaflet website. Thanks for the data from CUHKSZ Alumni Organization</p>
 <script src="us-state.js"></script>
 
+
 </body>
+
 </html>
 
 
